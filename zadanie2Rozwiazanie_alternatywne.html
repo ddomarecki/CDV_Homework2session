@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var input = prompt('Podaj rok:');
+        var Year = parseInt(input);
+
+        function LeapYear() {
+            if ((Year % 4 == 0) && (Year % 100 != 0) || (Year % 400 == 0)) {
+                alert("This is Leap Year");
+            } else {
+                alert("This is not leap year");
+            }
+        }
+        LeapYear();
+    </script>
+
+</body>
+
+</html>

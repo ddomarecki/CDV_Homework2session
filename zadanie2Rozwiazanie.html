@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Zadanie 2
+---
+
+Napisz skrypt który dla podanego przez użytkownika roku zwróci informację czy jest on przestępny.
+-->
+
+<body>
+    <script>
+        var input = parseInt(prompt("podaj rok"));
+        var yearMod = input % 4;
+        if (yearMod == 0) {
+            console.log("rok " + input + " jest przestępny");
+            alert("rok " + input + " jest przestępny");
+        } else {
+            console.log("rok " + input + " jest nieprzestępny");
+            alert("rok " + input + " jest nieprzestępny");
+        }
+    </script>
+</body>
+
+</html>

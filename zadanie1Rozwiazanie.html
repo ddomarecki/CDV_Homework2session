@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Zadanie 1
+---
+
+Napisz skrypt który dla podanych przez użytkownika liczb oddzielonych przecinkami wyliczy i wyświetli ich średnią arytmetyczną.
+Wartości nieliczbowe powinny zostać pominięte w obliczeniach.
+
+Przykład:
+
+Dla wartości `2,x,4,6,y` wartość średniej to `4`.
+-->
+
+<body>
+    <script>
+        var input = prompt("Podaj liczby oddzielone przecinkiem");
+        var array = input.split(",");
+        var arrayLength = array.length;
+        var sum = 0;
+        var number = 0;
+
+        for (i = 0; i < arrayLength; i++) {
+            var parse = parseInt(array[i]);
+            if (!isNaN(parse)) {
+                sum += parse;
+                number += 1;
+            }
+        }
+
+        var output = sum / number;
+        console.log(output);
+        alert("Średnia podanych liczb wynosi: " + output);
+    </script>
+</body>
+
+</html>

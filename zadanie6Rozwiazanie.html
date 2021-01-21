@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Zadanie 6
+---
+
+Napisz skrypt, który wyświetli na konsli następujący "magiczny" trójkąt:
+
+```
+ A B R A K A D A B R A
+  A B R A K A D A B R
+   A B R A K A D A B
+    A B R A K A D A
+     A B R A K A D
+      A B R A K A
+       A B R A K
+        A B R A
+         A B R
+          A B
+           A
+```
+-->
+
+<body>
+    <script>
+        var input = " A B R A K A D A B R A";
+        var length = input.length;
+        var array = [];
+        for (i = 0; i < length; i++) {
+            array.push(input[i]);
+        }
+
+        var iL = array.length;
+        var whiteL = 1;
+        var iteration = array.length / 2;
+        var inscript = "";
+        var white = "";
+
+        for (i = 0; i < iteration; i++) {
+            for (j = 0; j < iL; j++) {
+                inscript += array[j];
+            }
+            for (k = 0; k < whiteL; k++) {
+                white += " ";
+            }
+            console.log(white + inscript + "\n");
+            iL -= 2;
+            whiteL += 1;
+            inscript = "";
+            white = "";
+        }
+    </script>
+</body>
+
+</html>

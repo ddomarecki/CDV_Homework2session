@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Zadanie 4
+---
+Napisz skrypt, który sprawdzi czy dwa podane ciągi znaków są anagramami*.
+
+> *[anagram](https://pl.wikipedia.org/wiki/Anagram)
+
+przykłady anagramów:
+absurd / brudas
+bandzior / zbrodnia
+alergia /  galeria
+narty / tyran
+-->
+
+
+<body>
+    <script>
+        var input1 = prompt("podaj pierwszy ciąg znaków").toLowerCase();
+        var input2 = prompt("podaj drugi ciąg znaków").toLowerCase();
+
+        var arrayA = [];
+        var arrayB = [];
+        for (i = 0; i < input1.length; i++) {
+            arrayA.push(input1[i]);
+        }
+        for (i = 0; i < input2.length; i++) {
+            arrayB.push(input2[i]);
+        }
+        arrayA.sort();
+        arrayB.sort();
+        // correct final result:
+        //  var arrayA = ["a", "b", "c"];
+        //  var arrayB = ["a", "b", "c"];
+        var arrayAnum = 0;
+        var arrayBnum = 0;
+
+        //literacja po wyrazie "A" w poszukiwaniu liczb
+        for (i = 0; i < arrayA.length; i++) {
+            if (!isNaN(arrayA[i])) {
+                arrayAnum += 1;
+            } else {
+                arrayAnum += 0;
+            }
+        }
+        //literacja po wyrazie "B" w poszukiwaniu liczb
+        for (i = 0; i < arrayB.length; i++) {
+            if (!isNaN(arrayB[i])) {
+                arrayBnum += 1;
+            } else {
+                arrayBnum += 0;
+            }
+        }
+
+        if (arrayA[0] == undefined || arrayB[0] == undefined) {
+            alert("nie podałeś ciągu znaków!");
+            //sprawdzenie czy wcześniejsza pętla wykryła liczby:
+        } else if (arrayAnum > 0 || arrayBnum > 0) {
+            alert("podane ciągi zawierają liczby!")
+        } else {
+            //sprawdz czy obie tablice mają tyle samo znaków:
+            if (arrayA.length == arrayB.length) {
+                var anagram = 0;
+                for (i = 0; i < arrayA.length; i++) {
+                    /*sprawdzamy po kolei indeksy i porównujemy
+                     w obu tablicach czy są takie same.
+                      jak nie dodajemy do zmiennej anagram 1 */
+                    if (arrayA[i] == arrayB[i]) {
+                        anagram += 0;
+                    } else {
+                        anagram += 1;
+                    }
+                }
+                if (anagram == 0) {
+                    alert("podane wybrazy są anagramami!")
+                } else {
+                    alert("podane wyrazy NIE są anagramami! mają " + anagram + "różnych znaków");
+                }
+            } else {
+                alert("to nie jest anagram! Oba wyrażenia mają różną ilość znaków!");
+            }
+        }
+    </script>
+</body>
+
+</html>

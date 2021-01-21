@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Zadanie 7
+Zadanie 8
+---
+Napisz skrypt, który dla podanej liczby całkowitej `n` wyświetli gwiazdkami w konsoli trójkąt równoboczny złożony z `n` wierszy (w pierwszym wierszu jedna gwiadka a kolejne wiersze coraz szersze).
+
+Przykład:
+Dla n = 6:
+```
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+```
+-->
+
+<body>
+    <script>
+        var input = parseInt(prompt("Podaj liczbę 'n'"));
+        var strCount = 1;
+        var stars = "";
+        var white = "";
+        var whiteC = input - 1;
+        for (i = 0; i < input; i++) {
+            for (j = 0; j < strCount; j++) {
+                stars += "*";
+            }
+            for (k = 0; k < whiteC; k++) {
+                white += " ";
+            }
+            strCount += 2;
+            whiteC -= 1;
+            console.log(white + stars + "\n");
+            stars = "";
+            white = "";
+        }
+    </script>
+</body>
+
+</html>

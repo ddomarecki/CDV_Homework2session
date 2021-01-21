@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Zadanie 7
+---
+Napisz skrypt dla wprowadzonej liczby całkowitej `n` wyświetli gwiazdkami w konsoli prostokąt złożony z `n` wierszy oraz `2n` kolumn.
+
+Przykład:
+Dla n = 5:
+
+```
+**********
+**********
+**********
+**********
+**********
+
+-->
+
+<body>
+    <script>
+        var number = parseInt(prompt("Podaj liczbę 'n'"));
+        var columns = 2 * number;
+        var td = "";
+        var rows = number;
+        for (i = 0; i < rows; i++) {
+
+            for (j = 0; j < columns; j++) {
+                td += "*";
+            }
+            console.log(td + "\n");
+            td = "";
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    // if (number % 2 == 0) {
+    //     var rows = number / 2;
+    //     for (i = 0; i < rows; i++) {
+
+    //         for (j = 0; j < columns; j++) {
+    //             td += "*";
+    //         }
+    //         console.log(td + "\n");
+    //         console.log(td + "\n");
+    //         td = "";
+    //     }
+    // } else {
+    //     var rows = number;
+    //     for (i = 0; i < rows; i++) {
+
+    //         for (j = 0; j < columns; j++) {
+    //             td += "*";
+    //         }
+    //         console.log(td + "\n");
+    //         td = "";
+    //     }
+    // }
+</script>
